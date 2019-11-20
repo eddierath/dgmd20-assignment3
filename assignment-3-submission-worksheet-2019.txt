@@ -1,13 +1,15 @@
-DGMD E-20 Assignment 4
+DGMD E-20 Assignment 3
 
-Your name:
+Your name: Edward Rath
 
 1. Provide a link to the first page of your website:
+https://eddierath.github.io/dgmd20-assignment3/
+https://github.com/eddierath/dgmd20-assignment3
 
-My site looks the way I want on (choose one): Mac  PC
 
-With this browser (choose one): Firefox Chrome 
+My site looks the way I want on (choose one): Mac 
 
+With this browser (choose one): Chrome 
 
 
 
