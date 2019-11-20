@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" media="screen" href="style.css">
+  <title>🎤Create Account📣</title>
+</head>
+  <body>
+    <header>
+      <h1>🎤 Twitter Speaks 📣</h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="form.html">Get Started</a></li>
+      </ul>
+      </nav>
+
+    </header>
+    
+    <div class="formwrapper">
+      <h2>What should we listen for?</h2>
+      <p>Get started by selecting the elements you want spoken.</p>
+      <p>Need some inspiration? <a href="https://www.twitter.com" target="_blank">Go to Twitter</a> and sign in.</p>
+      <form>
+        <fieldset>
+          <legend>Listen to...?</legend>
+          <label for="handle">Twitter Handle</label>
+            <input type="text" id="handle" placeholder="do not include the @ symbol" autofocus>
+          <label for="hashtag">Hashtag</label>
+            <input type="text" id="hashtag" placeholder="do not include the # symbol">
+          <label for="keyword">Keyword(s)</label>
+          <input type="text" id="keyword" placeholder="words to listen for">
+        </fieldset>
+        <fieldset>
+          <legend>Extra Details</legend>
+          <label for="date">When to start listening. Default will be right now.</label>
+            <input type="date" id="date">
+  
+          <label for="filter" class="extraspace">Apply a filter</label>
+            <input name="filter" list="filter">
+            <datalist id="filter">
+              <label>Or select from the list</label>
+              <select name="filling">
+                <option selected>Select one. Default will be Popular</option>
+                <option value="popular">Popular</option>
+                <option value="trending">Trending</option>
+                <option value="location">Location</option>
+                <option value="retweets">Retweets</option>
+              </select>
+            </datalist>
+            
+            <label>
+              <input id="retweets" type="checkbox" value="retweets">Include retweets
+            </label>
+            <label>
+              <input id="location" type="checkbox" value="location">Include location
+            </label>
+            <label>
+              <input id="links" type="checkbox" value="retweets">Include links and URLs
+            </label>
+  
+  
+  
+  
+          <label class="extraspace">Include a customized message to be read out loud in between Tweets:
+            <textarea id="custommessage"></textarea>
+          </label>
+  
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+  
+    </div>
+</html>
