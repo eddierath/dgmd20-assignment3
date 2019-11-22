@@ -12,24 +12,40 @@ My site looks the way I want on (choose one): Mac
 With this browser (choose one): Chrome 
 
 
-
 PART 1A FLEXBOX LAYOUT
 Provide URL(s) and starting line number(s) for HTML and CSS for each item. 
 
 2. URL for the page coded with Flexbox grid layout. In the CSS, include a comment for where the Flexbox grid layout starts.
 
+Index.html - lines 33-60
+style.css - lines 21-50
+
 3. Number of columns used in your grid system:
 
+4
+
 4. HTML and CSS line numbers for where  reordering occurs:
+
+Index.html - lines 33-59
+style.css - lines 29, 45-46
 
 
 PART 1B GRID LAYOUT
 5. URL for the page coded with Grid layout. In the CSS, include a comment for where the Grid layout starts.
 
-6. HTML and CSS line numbers for where  reordering occurs:
+form.html - lines 33-101
+style.css - lines 175-230
+
+6. HTML and CSS line numbers for where reordering occurs:
+
+form.html - lines 34-79
+style.css - lines 184-186 - .grid-item-1 is reordered to render as the last, far right sidebar item
+
 
 7. HTML and CSS line numbers for where grid offset OR nested grid occurs:
 
+form.html - lines 81-101
+style.css - lines 180-212 offset
 
 
 
@@ -37,10 +53,16 @@ PART 2: RESPONSIVE IMAGES
 8. Regular image that has responsive qualities:
 HTML line number where image is called:
 
+form.html - line 26
+style.css - lines 168-173
+
+
 9. Background image that has responsive qualities:
 HTML line number where image is called:
 Corresponding CSS line number:
 
+index.html - lines 26-32
+style.css - lines 131-134
 
 
 PART 3: CSS LAYOUT PAPER
@@ -51,5 +73,11 @@ If you want to use Google Docs or similar online service, indicate a URL where w
 
 PART 5: WOW US (GRAD STUDENTS ONLY)
 Explain why we should be "wowed" by your assignment. Include any relevant HTML and CSS line numbers for us to examine.
+
+Recreating an embedded Tweet was a wow-factor challenge. I found that Twitter does not supply any markup, but they do offer style guides (), which is why I believe my deconstructed/reconstructed Tweet is wow-worthy. The use of the Tweet as an info-pane is also an intentional choice on the index.html page. With this site, I want to challenge the core concept of a Tweet. Is it an official statement? Can it be trusted? What is the source? By using a Twitter card as a container, I ask the viewer about their notion social media and digital consumption. See index.html lines 30-59 and style.css lines 33-60.
+
+The Twitter cards also act as flex boxes for the content within so that the text behaves the same across all Tweets.
+
+
 
 

@@ -5,108 +5,225 @@ html {
   box-sizing: inherit;
 }
 
+/* color variables for easier prototyping */
+:root {
+  --main-white-color: #f2f2f2;
+  --main-black-color: black;
+  --main-blue-color: rgb(72, 126, 197);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Index Flex CONTAINER */
+.container {
+  background-color: #f5f8fa;
+  /* Could not get flex-flow to behave this way */
+  display: flex;
+flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  }
+/* Flexbox for Twitter Card START*/
+  .item {
+  font-size: 1.2rem;
+  max-width: 350px;
+  margin: 20px 20px 20px 40px;
+	/* Twitter Font guideline */
+	font-family: "HelveticaNeue";
+	line-height: 1.2;
+	padding: 1rem;
+	background: white;
+  color: black;
+  /* flex items within the item box */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+
+
+/* Flexbox END*/
+  }
+  .upper-right {
+    margin: 0 0 3% 85%;
+    width: 50px;
+    height: 50px;
+  }
+  .upper-left {
+    font-size: 0.8rem;
+    margin: -12% 0 10% 0;
+    line-height: 0.7;
+    font-family: "HelveticaNeue-Light";
+  }
+button {
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: lightgray;
-	padding: 0;
-	margin: 0;
-}
-.wrapper {
-	border: 2px solid maroon;
-	width: 70%;
-	padding: 6rem 4rem;
-	overflow: auto;
-	margin: 0 auto;
-}
-header {
-	background-color: navy;
-	color: white;
-	width: 100%;
-	overflow: auto;
-	position: fixed;
-	padding: 0.2em;
-}
-header h1 {
-	margin: 0;
-	padding: 0.2em;
+  font: 16px/1.5 "Dosis", sans-serif;
 }
 
-/* image styles for float and clear */
 
-img {
-	border: 2px solid black;
-  	margin:-21.875% 0;
-}
-.floatleft {
-	float: left;
-	margin: 1em 1em 1em 0;
-	width: 20%;
 
-}
-.floatright {
-	float: right;
-	margin: 1em 0 1em 1em;
-	width: 20%;
 
+/* Header */
+.page-header {
+  background: var(--main-white-color);
+  min-height: 100px;
 }
-.clearfloat {
-	clear: right;
+.page-header nav {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+margin-right: 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-img {
-   width: 200px; 
-
-}
-article {
-	width: 100%;
-	float: left;
-	margin-right: 2%;
-	padding-top: 2rem;
-}
-
-header h1 {
-	width: 30%;
-	float: left;
-}
-h2 {
-	padding-top: 3rem;
-}
-
-/* start nav bar*/
-nav {
-	font-size: 1.2em;
-	font-weight: bold;
-	width: 65%;
-	float: left;
-	padding-top: 1.5em;
-}
-nav ul {
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-	text-align: right;
-}
-nav li {
-	display: inline-block;
-	padding-right: 1.3em;
-}
-nav a {
-	text-decoration: none;
-	color: white;
-}
 nav a:hover {
-	background-color: lightslategray;
+	color: rgba(0, 140, 255, 0.603);
 }
-/* end nav bar */
+button:hover {
+	background-color: rgb(162, 209, 255);
+}
+.page-header ul {
+  display: flex;
+  order: 1;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.page-header ul li:not(:last-child) {
+  padding-right: 15px;
+}
+
+.page-header .cta-contact {
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+
+/* main page */
+.page-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  min-height: 400px;
+  background: var(--main-blue-color)
+	/*Photo by Tyler Lastovich from Pexels*/
+    url("img/apple-cup-desk-7974-2.jpg") no-repeat
+    center / cover;
+  background-blend-mode: luminosity;
+  color: var(--main-white-color);
+}
+
+.page-main div {
+  max-width: 500px;
+}
+
+.page-main h1 {
+  margin-bottom: 20px;
+}
+
+.page-main p + p {
+  margin-top: 10px;
+}
 
 /* form start */
-.formwrapper {
-	width: 70%;
-	padding: 6rem 2rem;
-	overflow: auto;
-	margin: 0 auto;
-}
+.page-main-form {
+	min-height: 200px;
+	background: var(--main-blue-color)
+	  /*Photo by Tyler Lastovich from Pexels*/
+	  url("img/apple-cup-desk-7974-2.jpg") no-repeat
+	  center / cover;
+	background-blend-mode: luminosity;
+	color: var(--main-white-color);
+  }
+  .form-banner-text {
+	  padding: 60px;
+  }
+  .regular-image {
+	  max-width: 15%;
+	  min-width: 8%;
+	  float: right;
+	  padding: 20px;
+  }
 
+  /* Grid layout START */
+.formwrapper {
+	background-color: rgb(224, 224, 224);
+	display: grid;
+  	grid-template-columns: repeat(3, 1fr);
+  	grid-gap: 10px;
+	grid-auto-rows: minmax(100px, auto);
+	justify-content: space-evenly;	
+}
+.grid-item-1 {
+	grid-column: 3;
+ 	grid-row: 1 / 5;
+	font-size: 1rem;
+	max-width: 400px;
+	margin: 20px 20px 20px 40px;
+	  /* Twitter Font guideline */
+	  font-family: "HelveticaNeue";
+	  line-height: 1.2;
+	  padding: 1rem;
+	  background: white;
+	color: black;
+	
+  
+	}
+	.grid-item-2 {
+		grid-column: 1;
+		grid-row: 1 / 2;
+	}
+	.grid-item-3 {
+		grid-column: 2;
+		grid-row:  1 / 2;
+	}
+	.grid-item-4 {
+		grid-column: 1;
+		grid-row: 2 / 3;
+
+	}
+	.grid-item-5 {
+	grid-column: 2;
+		grid-row: 2 / 4;
+				
+	}
+	.grid-item {
+		margin: 20px 0 20px 20px;
+		font-size: 1.2rem;
+		/* Twitter Font guideline */
+		font-family: "HelveticaNeue";
+		line-height: 1.2;
+		padding: 1rem;
+		background: white;
+		color: black;	
+	}
+.grid-item:hover {
+	border: solid 2px;
+}
+  /* Grid layout END */
 fieldset {
 	margin: 1rem;
 	border: none;
@@ -131,30 +248,61 @@ input:not([type="radio"]):not([type="checkbox"]), textarea {
 	font-size: 1em;
 }
 
-/* form end */
 
-.columnfloatleft {
-	float: left;
-	margin: 1em 1em;
-	/* order for 4 numbers is TRouBLe */
+/* Footer */
+.page-footer {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column-reverse;
+  background: var(--main-white-color);
+  padding: 5px;
 }
 
-article.columns {
-	column-count: 2;
-	column-gap: 2rem;
-	column-rule: 2px solid black;
+.page-footer ul {
+  display: flex;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
 }
 
-figure {
-	display: block;
+.page-footer ul li:not(:last-child) {
+  margin-right: 20px;
 }
 
-pre { 
-	font-family: monospace; 
-	background-color: lightyellow;
-	border: solid;
-	border-color: lightgreen;
-	padding: 5px;
+.social-icon {
+	width: 32px;
+	height: 32px;
+}
+
+/* Media Screen resize */
+@media screen and (min-width: 550px) {
+  .page-header ul {
+    width: auto;
+    margin-top: 0;
+  }
+
+  .page-header .cta-contact {
+    order: 1;
+  }
+
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer ul {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .page-main {
+    padding-left: 90px;
+  }
 }
 
 .skip {
@@ -170,7 +318,7 @@ pre {
 a.skip:active, a.skip:focus, a.skip:hover {
 	left: 0; 
 	top: 0;
-	color: white;
+	color: black;
 	width: auto; 
 	height: auto; 
 	overflow: visible; 
